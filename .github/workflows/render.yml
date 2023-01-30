@@ -20,7 +20,9 @@ jobs:
     - name: install workaround sci package
       run: raco pkg install --auto https://github.com/samdphillips/sci.git
     - name: install plot-cookbook package
-      run: raco pkg install --batch --auto
+      uses: GabrielBB/xvfb-action@v1.6
+      with:
+        run: raco pkg install --batch --auto
     - name: build docs
       run: scribble +m --redirect-main http://pkg-build.racket-lang.org/doc/ --htmls --dest ./docs ./scribblings/plot-cookbook.scrbl
     - name: push to gh-pages
