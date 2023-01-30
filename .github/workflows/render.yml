@@ -15,8 +15,6 @@ jobs:
         distribution: 'full'
         variant: 'CS'
         version: 'stable'
-    - name: install libgfortran5
-      run: sudo apt-get install -y libgfortran5
     - name: install workaround sci package
       run: raco pkg install --auto https://github.com/samdphillips/sci.git
     - name: install plot-cookbook package
