@@ -1,7 +1,14 @@
 #lang info
 (define collection "plot-cookbook")
-(define deps '("base"))
-(define build-deps '("scribble-lib" "racket-doc" "rackunit-lib" "infix" "threading" "math/statistics" "data-frame" "csv-reading"))
+(define deps '("base" "colormaps" "latex-pict" "sci" "simple-polynomial"))
+(define build-deps
+  '("csv-reading"
+    "data-frame"
+    "infix"
+    "racket-doc"
+    "rackunit-lib"
+    "scribble-lib"
+    "threading"))
 (define scribblings '(("scribblings/plot-cookbook.scrbl" ())))
 (define pkg-desc "Description Here")
 (define version "0.0")
