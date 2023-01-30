@@ -1,6 +1,12 @@
 #lang info
 (define collection "plot-cookbook")
-(define deps '("base" "colormaps" "latex-pict" "sci" "simple-polynomial"))
+(define deps
+  '("base"
+    "colormaps"
+    "latex-pict"
+    "metapict"
+    "sci"
+    "simple-polynomial"))
 (define build-deps
   '("csv-reading"
     "data-frame"
