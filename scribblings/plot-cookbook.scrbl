@@ -11,7 +11,7 @@ The Plot library provides a flexible interface for producing nearly any kind of 
 It includes many common kinds of plots already, such as scatter plots, line plots, contour plots, histograms, and 3D surfaces and isosurfaces.
 Thanks to Racket's excellent multiple-backend drawing library, Plot can render plots as interactive snips in DrRacket, as picts in slideshows, as PNG, PDF, PS and SVG files, or on any device context.
 
-The Plot Cookbook aims to provide an set of examples for education and resuse.
+The Plot Cookbook aims to provide an set of examples for education and reuse.
 
 For more about Plot see @racketmodname[plot].
 
