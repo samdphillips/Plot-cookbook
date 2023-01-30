@@ -1,11 +1,10 @@
 #lang scribble/manual
-@(require "common.rkt" plot threading data-frame)
+@(require "common.rkt" threading data-frame)
 
 @(define plot-eval-df
   (let ([eval  (make-base-eval)])
     (eval '(begin
              (require racket
-                      plot/pict
                       plot/utils
                       data-frame
                       threading)))
