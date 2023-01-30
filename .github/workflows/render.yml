@@ -1,0 +1,26 @@
+on:
+  push:
+    branches:
+      - main
+jobs:
+  publish:
+    runs-on: 'ubuntu-latest'
+    steps:
+    - name: checkout
+      uses: actions/checkout@master
+    - name: install racket
+      uses: Bogdanp/setup-racket@v1.9
+      with:
+        architecture: 'x64'
+        distribution: 'full'
+        variant: 'CS'
+        version: 'stable'
+    - name: install plot-cookbook package
+      run: raco pkg install --batch --auto
+    - name: build docs
+      run: scribble +m --redirect-main http://pkg-build.racket-lang.org/doc/ --htmls --dest ./docs ./scribblings/plot-cookbook.scrbl
+    - name: push to gh-pages
+      uses: JamesIves/github-pages-deploy-action@v4.4.0
+      with:
+        folder: docs/plot-cookbook
+        branch: gh-pages
