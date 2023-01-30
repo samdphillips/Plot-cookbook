@@ -28,14 +28,15 @@
          (only-in racket/contract any/c)
          (for-label (only-in racket/contract any/c)))
 
-(define (author-email) "neil.toronto@gmail.com")
-
-(define (plot-name) "Plot")
-
 (define plot-eval
   (let ([eval  (make-base-eval)])
     (eval '(begin
-             (require racket/math racket/match racket/list racket/draw racket/class
+             (require racket/class
+                      racket/draw
+                      racket/list
+                      racket/match
+                      racket/math
+
                       plot/pict
                       plot/utils)))
     eval))
